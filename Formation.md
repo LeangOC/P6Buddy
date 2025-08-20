@@ -8,7 +8,7 @@
       * Concept : convention Upper Camel Case
       * Attribut : convention Lower Camel Case
                   typé (date,texte...)
-                  domaine : l'ensemble de valeurs , extention (list finie )  ou intention ( date,composite ...)
+                  domaine : l'ensemble de valeurs , extension (list finie )  ou intention ( date,composite ...)
       * Méthode : modifier les attributs, calculer un résultat ou les deux.
                   
                    
