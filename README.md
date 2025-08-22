@@ -13,3 +13,7 @@ _Projet P6Buddy initialisé avec Spring Initializr_
 
 # dev2 
 *Ajout schema.sql et création de ce schéma dans la base Mysql
+
+# dev3
+*Ajout dépendance Spring Data JPA et driver Mysql
+*Complète le fichier application.properties
