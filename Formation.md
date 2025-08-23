@@ -16,3 +16,9 @@
     
     - MLD : Modèle Logique  de données.
     - MPD : Modèle Physique de données.
+
+### Spring Data JPA
+Pour pouvoir faire communiquer l'application Java avec la base de données Mysql, il nous faut 
+le Spring Data JPA et API Mysql.
+
+
