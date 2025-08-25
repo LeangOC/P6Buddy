@@ -19,6 +19,6 @@ _Projet P6Buddy initialisé avec Spring Initializr_
 *Complète le fichier application.properties
 
 # dev4  
-*But:Vérifier le bon fonctionnement Spring Data JPA et la base Mysql
+*But:Vérifier le bon fonctionnement de la méthode UserService.getUsers()
 *Insertion manuelle de deux lignes dans la table user de la base Mysql.  
 *Récupération le username de ces deux lignes avec la méthode UserService.getUsers()
