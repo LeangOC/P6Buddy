@@ -17,3 +17,8 @@ _Projet P6Buddy initialisé avec Spring Initializr_
 # dev3
 *Ajout dépendance Spring Data JPA et driver Mysql
 *Complète le fichier application.properties
+
+# dev4  
+*But:Vérifier le bon fonctionnement Spring Data JPA et la base Mysql
+*Insertion manuelle de deux lignes dans la table user de la base Mysql.  
+*Récupération le username de ces deux lignes avec la méthode UserService.getUsers()
