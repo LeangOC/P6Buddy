@@ -1,6 +1,6 @@
 package com.oc.P6Buddy;
 
-import com.oc.P6Buddy.model.User;
+import com.oc.P6Buddy.model.users;
 import com.oc.P6Buddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -17,7 +17,7 @@ public class P6BuddyApplication implements CommandLineRunner {
 	}
 @Override
 	public void run(String... args ) throws Exception {
-	Iterable<User> users = userService.getUsers();
+	Iterable<users> users = userService.getUsers();
 	users.forEach(user -> System.out.println(user.getUserName()));
 	}
 }

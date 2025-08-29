@@ -22,3 +22,6 @@ _Projet P6Buddy initialisé avec Spring Initializr_
 *But:Vérifier le bon fonctionnement de la méthode UserService.getUsers()
 *Insertion manuelle de deux lignes dans la table user de la base Mysql.  
 *Récupération le username de ces deux lignes avec la méthode UserService.getUsers()
+
+# dev5
+Passer le nom des tables en anglais : Ami en Buddy, Compte en Account.
