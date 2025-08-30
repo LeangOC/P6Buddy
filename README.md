@@ -27,4 +27,6 @@ _Projet P6Buddy initialisé avec Spring Initializr_
 Passer le nom des tables en anglais : Ami en Buddy, Compte en Account.
 
 # solution1
-Implémentation de la page de connexion d'essai
+Implémentation de la page de connexion d'essai  
+<img width="589" height="78" alt="image" src="https://github.com/user-attachments/assets/f4aab2d6-56e4-47a3-acf8-088702ffafbf" />
+
