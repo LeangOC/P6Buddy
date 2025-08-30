@@ -1,8 +1,61 @@
-:root{
---brand:#f5a623; /* bouton titre */
---primary:#1a73e8; /* bouton login */
---bg:#f7f7f7;
+/* Mise en page générale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-*{box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
-body{margin:0;background:var(--bg);}
-.container{min-height:100vh;display:grid;place-items:
+
+/* Conteneur de login */
+.login-container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Header - bouton orange */
+.logo-btn {
+    background-color: #ff9800;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    cursor: default;
+}
+
+/* Formulaire */
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Bouton connexion bleu */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}

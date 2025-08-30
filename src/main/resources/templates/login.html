@@ -2,22 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pay My Buddy - Login</title>
+    <title>Login - Pay My Buddy</title>
     <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
-<div class="container">
-    <div class="card">
-        <div class="logo">Pay My Buddy</div>
-        <form method="post" th:action="@{/login}" class="form">
-            <input type="email" name="email" placeholder="Mail" required
-                   th:value="${enteredEmail}">
-            <input type="password" name="password" placeholder="Mot de passe" required>
-            <button type="submit" class="btn-primary">Se connecter</button>
-        </form>
-        <p class="error" th:if="${error}" th:text="${error}"></p>
+<div class="login-container">
+    <div class="header">
+        <button class="logo-btn">Pay My Buddy</button>
     </div>
+
+    <form th:action="@{/login}" method="post" class="login-form">
+        <input type="email" name="email" placeholder="Mail" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+        <button type="submit" class="login-btn">Se connecter</button>
+    </form>
 </div>
 </body>
 </html>

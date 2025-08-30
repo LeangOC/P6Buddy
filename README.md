@@ -30,3 +30,5 @@ Passer le nom des tables en anglais : Ami en Buddy, Compte en Account.
 Implémentation de la page de connexion d'essai  
 <img width="589" height="78" alt="image" src="https://github.com/user-attachments/assets/f4aab2d6-56e4-47a3-acf8-088702ffafbf" />
 
+# solution2
+page login avec la maquette de Figma
