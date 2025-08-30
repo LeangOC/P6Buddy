@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion réussie</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <div class="card success">
+        <h1>Connexion réussie ✅</h1>
+        <p th:text="'Bienvenue, ' + ${user.username} + ' !'"></p>
+        <a href="/login" class="btn-secondary">Retour</a>
+    </div>
+</div>
+</body>
+</html>
