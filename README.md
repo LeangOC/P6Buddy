@@ -32,3 +32,5 @@ Implémentation de la page de connexion d'essai
 
 # solution2
 page login avec la maquette de Figma enrichie avec le style css.
+
+<img width="312" height="234" alt="image" src="https://github.com/user-attachments/assets/e90392a6-80aa-497e-bd67-6637bfec0137" />
