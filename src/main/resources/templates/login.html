@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pay My Buddy - Login</title>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
-<div class="container">
-    <div class="card">
-        <div class="logo">Pay My Buddy</div>
-        <form method="post" th:action="@{/login}" class="form">
-            <input type="email" name="email" placeholder="Mail" required
-                   th:value="${enteredEmail}">
-            <input type="password" name="password" placeholder="Mot de passe" required>
-            <button type="submit" class="btn-primary">Se connecter</button>
-        </form>
-        <p class="error" th:if="${error}" th:text="${error}"></p>
-    </div>
-</div>
+<h1>Pay My Buddy</h1>
+<form method="post" th:action="@{/login}">
+    <label for="email">Mail :</label><br>
+    <input type="email" id="email" name="email" placeholder="Mail" required th:value="${enteredEmail}"><br><br>
+    <label for="password">Mot de passe :</label><br>
+    <input type="password" id="password" name="password" placeholder="Mot de passe" required><br><br>
+    <button type="submit">Se connecter</button>
+</form>
+<!-- Affiche une erreur si elle existe-->
+<p th:if="${error}" th:text="${error}" style="color: red;"></p>
 </body>
 </html>
