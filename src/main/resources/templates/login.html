@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login - Pay My Buddy</title>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <div class="login-container">
@@ -17,5 +17,7 @@
         <button type="submit" class="login-btn">Se connecter</button>
     </form>
 </div>
+<p th:if="${error}" th:text="${error}" style="color: red;"></p>
 </body>
 </html>
+
