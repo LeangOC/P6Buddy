@@ -1,5 +1,5 @@
 -- ==== INSERT DATA ====
-
+use
 -- Users
 INSERT INTO Users (username, email, password) VALUES
 ('Alice', 'alice@example.com', 'password123'),

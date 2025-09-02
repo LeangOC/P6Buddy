@@ -15,6 +15,11 @@
         <input type="email" name="email" placeholder="Mail" required>
         <input type="password" name="password" placeholder="Mot de passe" required>
         <button type="submit" class="login-btn">Se connecter</button>
+        <div class="row  mx-auto my-auto">
+            <p class="text-center">
+                Nouveau Ici : <a th:href="@{/signup}" href="/signup">Inscription</a>
+            </p>
+        </div>
     </form>
 </div>
 <p th:if="${error}" th:text="${error}" style="color: red;"></p>
