@@ -17,8 +17,13 @@
         <input type="password" name="password" placeholder="Mot de passe" required>
         <button type="submit" class="login-btn">S’inscrire</button>
     </form>
-
+    <p th:if="${success}" th:text="${success}" style="color: green; font-weight: bold;"></p>
     <p th:if="${error}" th:text="${error}" style="color: red;"></p>
+    <div class="row mx-auto my-auto">
+        <p class="text-center">
+            Déjà inscrit ? <a th:href="@{/login}" href="/login">Se connecter</a>
+        </p>
+    </div>
 </div>
 </body>
 </html>

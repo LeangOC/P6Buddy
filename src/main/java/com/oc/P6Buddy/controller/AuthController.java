@@ -60,8 +60,10 @@ public class AuthController {
         try {
             authService.register(username, email, password);
             // Après inscription → redirection vers login
-            model.addAttribute("successMessage", "Inscription réussie, vous pouvez vous connecter !");
-            return "login";
+            //model.addAttribute("successMessage", "Inscription réussie, vous pouvez vous connecter !");
+            //return "login";
+            model.addAttribute("success", "Inscription réussie ! Vous pouvez maintenant vous connecter.");
+            return "signup"; // On reste sur la même page
         } catch (IllegalArgumentException e) {
             model.addAttribute("error", e.getMessage());
             return "signup";

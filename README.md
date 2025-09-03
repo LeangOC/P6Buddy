@@ -41,6 +41,12 @@ Ajout le lien "Inscription" dans la page login
 
 
 # solution4
-Ajout la page d'inscription  
+Ajout de la page d'inscription  
 <img width="214" height="194" alt="image" src="https://github.com/user-attachments/assets/80be95ec-a4d3-40a7-902c-e7f7d793c363" />
+
+# solution5
+Ajout dans la page d'inscription "Déjà inscrit? Se connecter"
+Ajout dans la page d'inscription le message "Inscription réussie ! Vous pouvez maintenant vous connecter" quand l'inscription s'est bien déroulée.
+
+
 
