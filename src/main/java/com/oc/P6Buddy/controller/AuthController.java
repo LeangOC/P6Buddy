@@ -1,7 +1,7 @@
 package com.oc.P6Buddy.controller;
 
 
-import com.oc.P6Buddy.model.Users;
+import com.oc.P6Buddy.model.User;
 import com.oc.P6Buddy.service.AuthService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,7 +35,7 @@ public class AuthController {
     public String doLogin(@RequestParam String email,
                           @RequestParam String password,
                           Model model) {
-        Optional<Users> user = authService.authenticate(email, password);
+        Optional<User> user = authService.authenticate(email, password);
         if (user.isPresent()) {
             model.addAttribute("user", user.get());
             return "success"; // templates/success.html
@@ -44,4 +44,28 @@ public class AuthController {
         model.addAttribute("enteredEmail", email);
         return "login";
     }
+
+    // com.oc.P6Buddy.controller.AuthController.java
+
+    @GetMapping("/signup")
+    public String signupPage() {
+        return "signup"; // templates/signup.html
+    }
+
+    @PostMapping("/signup")
+    public String doSignup(@RequestParam String username,
+                           @RequestParam String email,
+                           @RequestParam String password,
+                           Model model) {
+        try {
+            authService.register(username, email, password);
+            // Après inscription → redirection vers login
+            model.addAttribute("successMessage", "Inscription réussie, vous pouvez vous connecter !");
+            return "login";
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("error", e.getMessage());
+            return "signup";
+        }
+    }
+
 }

@@ -37,3 +37,6 @@ page login avec la maquette de Figma enrichie avec le style css.
 
 # solution3 
 Ajout le lien "Inscription" dans la page login
+
+# solution4
+Ajout la page d'inscription

@@ -1,32 +1,32 @@
-CREATE DATABASE  IF NOT EXISTS `P6Buddy`;
-use P6Buddy;
--- Table User
-CREATE TABLE User (
+CREATE DATABASE  IF NOT EXISTS `MyP6Buddy`;
+USE MyP6Buddy;
+-- Table Users
+CREATE TABLE Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
 
--- Table Compte
-CREATE TABLE Compte (
+-- Table Account
+CREATE TABLE Account (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    solde DOUBLE DEFAULT 0,
-    CONSTRAINT fk_compte_user FOREIGN KEY (user_id) REFERENCES User(id)
+    balance DECIMAL(10,2) DEFAULT 0,
+    CONSTRAINT fk_account_user FOREIGN KEY (user_id) REFERENCES Users(id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- Table Ami
-CREATE TABLE Ami (
+-- Table Buddy
+CREATE TABLE Buddy (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    ami_id INT NOT NULL,
-    CONSTRAINT fk_ami_user FOREIGN KEY (user_id) REFERENCES User(id)
+    buddy_id INT NOT NULL,
+    CONSTRAINT fk_buddy_user FOREIGN KEY (user_id) REFERENCES Users(id)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT fk_ami_ami FOREIGN KEY (ami_id) REFERENCES User(id)
+    CONSTRAINT fk_buddy_buddy FOREIGN KEY (buddy_id) REFERENCES Users(id)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT unique_ami UNIQUE (user_id, ami_id)
+    CONSTRAINT unique_buddy UNIQUE (user_id, buddy_id)
 );
 
 -- Table Transaction
@@ -35,9 +35,9 @@ CREATE TABLE Transaction (
     sender INT NOT NULL,
     receiver INT NOT NULL,
     description VARCHAR(255),
-    amount DOUBLE NOT NULL CHECK (amount > 0),
-    CONSTRAINT fk_transaction_sender FOREIGN KEY (sender) REFERENCES User(id)
+    amount DECIMAL(10,2) NOT NULL CHECK (amount > 0),
+    CONSTRAINT fk_transaction_sender FOREIGN KEY (sender) REFERENCES Users(id)
         ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT fk_transaction_receiver FOREIGN KEY (receiver) REFERENCES User(id)
+    CONSTRAINT fk_transaction_receiver FOREIGN KEY (receiver) REFERENCES Users(id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );

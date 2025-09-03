@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription - Pay My Buddy</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="header">
+        <button class="logo-btn">Pay My Buddy</button>
+    </div>
+
+    <form th:action="@{/signup}" method="post" class="login-form">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Mail" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+        <button type="submit" class="login-btn">S’inscrire</button>
+    </form>
+
+    <p th:if="${error}" th:text="${error}" style="color: red;"></p>
+</div>
+</body>
+</html>
