@@ -66,16 +66,19 @@
 <body>
 <!-- Barre de navigation -->
 <nav class="navbar">
-    <a href="#" class="logo">Pay My Buddy</a>
-    <ul>
-        <li><a href="#">Transférer</a></li>
-        <li><a href="#">Profil</a></li>
-        <li><a href="#" class="active">Ajouter relation</a></li>
-        <li><a href="/login">Se déconnecter</a></li>
-    </ul>
-</nav>
+    <button class="logo-btn">Pay My Buddy</button>
+    <!-- <a href="#" class="logo">Pay My Buddy</a> -->
+     <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="#">Transférer</a></li>
+         <li><a href="#">Transférer</a></li>
+         <li><a href="#">Profil</a></li>
+         <li><a href="#" class="active">Ajouter relation</a></li>
+         <li><a href="/login">Se déconnecter</a></li>
+     </ul>
+ </nav>
 
-<!-- Contenu principal centré -->
+ <!-- Contenu principal centré -->
 <div class="main-content">
     <h2>Bienvenue sur Pay My Buddy</h2>
     <p th:text="'Bonjour ' + ${user.username}"></p>

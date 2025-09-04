@@ -1,7 +1,8 @@
 package com.oc.P6Buddy.service;
 
-
+import com.oc.P6Buddy.model.Account;
 import com.oc.P6Buddy.model.User;
+import com.oc.P6Buddy.repository.AccountRepository;
 import com.oc.P6Buddy.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +13,11 @@ import java.util.Optional;
 @Service
 public class AuthService {
     private final UserRepository userRepository;
+    private final AccountRepository accountRepository;
 
-
-    public AuthService(UserRepository userRepository) {
+    public AuthService(UserRepository userRepository, AccountRepository accountRepository) {
         this.userRepository = userRepository;
+        this.accountRepository = accountRepository;
     }
 
 
@@ -40,7 +42,15 @@ public class AuthService {
         user.setEmail(email);
         user.setPassword(rawPassword); //  en clair pour l’instant
 
-        return userRepository.save(user);
-    }
+        User savedUser = userRepository.save(user);
 
+
+        // Création du compte avec balance = 0.0
+        Account account = new Account();
+        account.setUser(savedUser);
+        account.setBalance(0.0);
+        accountRepository.save(account);
+        return savedUser;
+    }
 }
+
