@@ -59,5 +59,5 @@ Création automatique du solde 0.0 lors de l’inscription d’un utilisateur.
 # solution8
 Afficher le solde de l'utilisateur dans la page home après la connexion
 
-
-
+# solution9
+Encadrer en bleu l'affichage du solde 

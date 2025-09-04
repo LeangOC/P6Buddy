@@ -49,17 +49,35 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: calc(100vh - 60px); /* toute la hauteur sauf la navbar */
-            margin-top: 60px; /* pour éviter que le contenu passe sous la navbar */
+            height: calc(100vh - 60px);
+            margin-top: 60px;
             text-align: center;
         }
         .main-content h2 {
             font-size: 28px;
             margin-bottom: 10px;
         }
-        .main-content p {
-            font-size: 18px;
-            color: #555;
+
+        /* Carte solde */
+        .balance-card {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            margin-top: 25px;
+            text-align: center;
+            width: 300px;
+        }
+        .balance-card h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .balance-card p {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0 0 0;
         }
     </style>
 </head>
@@ -67,22 +85,25 @@
 <!-- Barre de navigation -->
 <nav class="navbar">
     <button class="logo-btn">Pay My Buddy</button>
-    <!-- <a href="#" class="logo">Pay My Buddy</a> -->
-     <ul>
-         <li><a href="#">Home</a></li>
-         <li><a href="#">Transférer</a></li>
-         <li><a href="#">Transférer</a></li>
-         <li><a href="#">Profil</a></li>
-         <li><a href="#" class="active">Ajouter relation</a></li>
-         <li><a href="/login">Se déconnecter</a></li>
-     </ul>
- </nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Transférer</a></li>
+        <li><a href="#">Profil</a></li>
+        <li><a href="#" class="active">Ajouter relation</a></li>
+        <li><a href="/login">Se déconnecter</a></li>
+    </ul>
+</nav>
 
- <!-- Contenu principal centré -->
+<!-- Contenu principal centré -->
 <div class="main-content">
     <h2>Bienvenue sur Pay My Buddy</h2>
     <p th:text="'Bonjour ' + ${user.username}"></p>
-    <p>Votre solde actuel est : <span th:text="${balance} + ' €'"></span></p>
+
+    <!-- Carte affichant le solde -->
+    <div class="balance-card">
+        <h3>Votre solde actuel</h3>
+        <p th:text="${balance} + ' €'"></p>
+    </div>
 </div>
 </body>
 </html>
