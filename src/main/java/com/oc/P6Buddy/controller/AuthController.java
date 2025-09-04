@@ -38,7 +38,8 @@ public class AuthController {
         Optional<User> user = authService.authenticate(email, password);
         if (user.isPresent()) {
             model.addAttribute("user", user.get());
-            return "success"; // templates/success.html
+           // return "success"; // templates/success.html
+            return "home"; // page d'accueil après connexion
         }
         model.addAttribute("error", "Email ou mot de passe incorrect.");
         model.addAttribute("enteredEmail", email);
@@ -60,8 +61,6 @@ public class AuthController {
         try {
             authService.register(username, email, password);
             // Après inscription → redirection vers login
-            //model.addAttribute("successMessage", "Inscription réussie, vous pouvez vous connecter !");
-            //return "login";
             model.addAttribute("success", "Inscription réussie ! Vous pouvez maintenant vous connecter.");
             return "signup"; // On reste sur la même page
         } catch (IllegalArgumentException e) {

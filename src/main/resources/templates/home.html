@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Pay My Buddy</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Barre de navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 15px 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 18px;
+            color: #000;
+            text-decoration: none;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenu centré */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: calc(100vh - 60px); /* toute la hauteur sauf la navbar */
+            margin-top: 60px; /* pour éviter que le contenu passe sous la navbar */
+            text-align: center;
+        }
+        .main-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .main-content p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<!-- Barre de navigation -->
+<nav class="navbar">
+    <a href="#" class="logo">Pay My Buddy</a>
+    <ul>
+        <li><a href="#">Transférer</a></li>
+        <li><a href="#">Profil</a></li>
+        <li><a href="#" class="active">Ajouter relation</a></li>
+        <li><a href="/login">Se déconnecter</a></li>
+    </ul>
+</nav>
+
+<!-- Contenu principal centré -->
+<div class="main-content">
+    <h2>Bienvenue sur Pay My Buddy</h2>
+    <p th:text="'Bonjour ' + ${user.username}"></p>
+</div>
+</body>
+</html>
