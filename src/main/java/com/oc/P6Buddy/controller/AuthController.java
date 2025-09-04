@@ -37,8 +37,14 @@ public class AuthController {
                           Model model) {
         Optional<User> user = authService.authenticate(email, password);
         if (user.isPresent()) {
-            model.addAttribute("user", user.get());
-           // return "success"; // templates/success.html
+            User loggedUser = user.get();
+            model.addAttribute("user", loggedUser);
+
+            // Récupérer le solde
+
+            Double balance = authService.getUserBalance(loggedUser.getId());
+            model.addAttribute("balance", balance);
+
             return "home"; // page d'accueil après connexion
         }
         model.addAttribute("error", "Email ou mot de passe incorrect.");

@@ -56,7 +56,8 @@ Ajouter la page home.html selon la maquette Figma
 Passer le logo "Pay My Buddy" en bouton jaune  
 Création automatique du solde 0.0 lors de l’inscription d’un utilisateur.
 
-
+# solution8
+Afficher le solde de l'utilisateur dans la page home après la connexion
 
 
 

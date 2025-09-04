@@ -82,6 +82,7 @@
 <div class="main-content">
     <h2>Bienvenue sur Pay My Buddy</h2>
     <p th:text="'Bonjour ' + ${user.username}"></p>
+    <p>Votre solde actuel est : <span th:text="${balance} + ' €'"></span></p>
 </div>
 </body>
 </html>

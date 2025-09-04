@@ -52,5 +52,13 @@ public class AuthService {
         accountRepository.save(account);
         return savedUser;
     }
+
+    public Double getUserBalance(Integer userId) {
+        return accountRepository.findByUserId(userId)
+                .map(Account::getBalance)
+                .orElse(0.0);
+    }
+
+
 }
 
