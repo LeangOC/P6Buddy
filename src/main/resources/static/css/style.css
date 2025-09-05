@@ -112,4 +112,26 @@ main {
     padding: 20px;
 }
 
+ /* Carte solde */
+        .balance-card {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            margin-top: 25px;
+            text-align: center;
+            width: 300px;
+        }
+        .balance-card h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .balance-card p {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0 0 0;
+        }
+
 
