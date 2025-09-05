@@ -1,110 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="fr"
+      layout:decorate="~{layout}">
 <head>
-    <meta charset="UTF-8">
-    <title>Accueil - Pay My Buddy</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
-        /* Barre de navigation */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fff;
-            padding: 15px 40px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            font-family: Arial, sans-serif;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            z-index: 1000;
-        }
-        .navbar .logo {
-            font-weight: bold;
-            font-size: 18px;
-            color: #000;
-            text-decoration: none;
-        }
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-        .navbar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contenu centré */
-        .main-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: calc(100vh - 60px);
-            margin-top: 60px;
-            text-align: center;
-        }
-        .main-content h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        /* Carte solde */
-        .balance-card {
-            background: linear-gradient(135deg, #007bff, #00c6ff);
-            color: white;
-            padding: 30px 40px;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            margin-top: 25px;
-            text-align: center;
-            width: 300px;
-        }
-        .balance-card h3 {
-            margin: 0;
-            font-size: 20px;
-            font-weight: 500;
-        }
-        .balance-card p {
-            font-size: 32px;
-            font-weight: bold;
-            margin: 10px 0 0 0;
-        }
-    </style>
+    <title>Accueil</title>
 </head>
 <body>
-<!-- Barre de navigation -->
-
-<nav class="navbar">
-    <button class="logo-btn">Pay My Buddy</button>
-    <ul>
-        <li><a href="/home">Home</a></li>
-        <li><a href="#">Transférer</a></li>
-        <li><a href="#">Profil</a></li>
-        <li><a href="/relation" class="active">Ajouter relation</a></li>
-        <li><a href="/logout">Se déconnecter</a></li>
-    </ul>
-</nav>
-
-<!-- Contenu principal centré -->
-<div class="main-content">
+<main layout:fragment="content" class="main-content">
     <h2>Bienvenue sur Pay My Buddy</h2>
     <p th:text="'Bonjour ' + ${user.username}"></p>
-
-    <!-- Carte affichant le solde -->
     <div class="balance-card">
         <h3>Votre solde actuel</h3>
         <p th:text="${balance} + ' €'"></p>
     </div>
-</div>
+</main>
 </body>
 </html>

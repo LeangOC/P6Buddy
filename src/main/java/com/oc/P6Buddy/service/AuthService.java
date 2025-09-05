@@ -6,9 +6,7 @@ import com.oc.P6Buddy.repository.AccountRepository;
 import com.oc.P6Buddy.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
-
 import java.util.Optional;
-
 
 @Service
 public class AuthService {
@@ -20,19 +18,12 @@ public class AuthService {
         this.accountRepository = accountRepository;
     }
 
-
-    /**
-     * Vérifie si l’email et le mot de passe correspondent.
-     * (Prototype: mot de passe en clair pour simplifier le démarrage)
-     */
     public Optional<User> authenticate(String email, String rawPassword) {
         return userRepository.findByEmail(email)
                 .filter(u -> u.getPassword().equals(rawPassword));
     }
 
-
     public User register(String username, String email, String rawPassword) {
-        // Vérifie que l’email n’est pas déjà utilisé
         userRepository.findByEmail(email).ifPresent(u -> {
             throw new IllegalArgumentException("Cet email est déjà utilisé !");
         });
@@ -40,16 +31,16 @@ public class AuthService {
         User user = new User();
         user.setUsername(username);
         user.setEmail(email);
-        user.setPassword(rawPassword); //  en clair pour l’instant
+        user.setPassword(rawPassword);
 
         User savedUser = userRepository.save(user);
 
-
-        // Création du compte avec balance = 0.0
+        // Créer automatiquement un compte avec solde = 0
         Account account = new Account();
         account.setUser(savedUser);
         account.setBalance(0.0);
         accountRepository.save(account);
+
         return savedUser;
     }
 
@@ -58,7 +49,4 @@ public class AuthService {
                 .map(Account::getBalance)
                 .orElse(0.0);
     }
-
-
 }
-
