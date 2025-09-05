@@ -50,6 +50,7 @@ Ajout dans la page d'inscription le message "Inscription réussie ! Vous pouvez 
 <img width="210" height="240" alt="image" src="https://github.com/user-attachments/assets/42f468cf-47e0-4947-b6d0-ad014373a3ac" />
 
 # solution6
-Ajout la page home.html selon la maquette Figma
+Ajout la page home.html selon la maquette Figma  
+<img width="278" height="297" alt="image" src="https://github.com/user-attachments/assets/fdaef7b4-d893-4646-822c-addf85fa4236" />
 
 
