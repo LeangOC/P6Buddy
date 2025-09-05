@@ -34,18 +34,23 @@ public class AuthController {
     @PostMapping("/login")
     public String doLogin(@RequestParam String email,
                           @RequestParam String password,
-                          Model model) {
+                          Model model,
+                          jakarta.servlet.http.HttpSession session) {
         Optional<User> user = authService.authenticate(email, password);
         if (user.isPresent()) {
             User loggedUser = user.get();
+
+            // Stockage en session
+            session.setAttribute("loggedUser", loggedUser);
+
+            // Passage au modèle pour affichage
             model.addAttribute("user", loggedUser);
 
             // Récupérer le solde
-
             Double balance = authService.getUserBalance(loggedUser.getId());
             model.addAttribute("balance", balance);
 
-            return "home"; // page d'accueil après connexion
+            return "home"; // page d’accueil après connexion
         }
         model.addAttribute("error", "Email ou mot de passe incorrect.");
         model.addAttribute("enteredEmail", email);
@@ -73,6 +78,11 @@ public class AuthController {
             model.addAttribute("error", e.getMessage());
             return "signup";
         }
+    }
+    @GetMapping("/logout")
+    public String logout(jakarta.servlet.http.HttpSession session) {
+        session.invalidate();
+        return "redirect:/login";
     }
 
 }
