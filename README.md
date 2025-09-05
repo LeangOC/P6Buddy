@@ -50,11 +50,14 @@ Ajout dans la page d'inscription le message "Inscription réussie ! Vous pouvez 
 <img width="210" height="240" alt="image" src="https://github.com/user-attachments/assets/42f468cf-47e0-4947-b6d0-ad014373a3ac" />
 
 # solution6
-Ajouter la page home.html selon la maquette Figma
+Ajouter la page home.html selon la maquette Figma  
+<img width="278" height="297" alt="image" src="https://github.com/user-attachments/assets/fdaef7b4-d893-4646-822c-addf85fa4236" />
 
 # solution7
 Passer le logo "Pay My Buddy" en bouton jaune  
-Création automatique du solde 0.0 lors de l’inscription d’un utilisateur.
+Ajouter le lien 'Home' dans la barre de navigation.  
+<img width="350" height="347" alt="image" src="https://github.com/user-attachments/assets/adb9c27d-16c6-48a6-95cd-7016cc4ede9f" />
+
 
 # solution8
 Afficher le solde de l'utilisateur dans la page home après la connexion
