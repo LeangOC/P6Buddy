@@ -65,4 +65,7 @@ Afficher le solde de l'utilisateur dans la page home après la connexion
 <img width="352" height="318" alt="image" src="https://github.com/user-attachments/assets/525a70f7-2cba-4fac-b3d4-edb1a29f3037" />
 
 # solution9
-Encadrer en bleu l'affichage du solde 
+Encadrer en bleu l'affichage du solde   
+<img width="462" height="436" alt="image" src="https://github.com/user-attachments/assets/8879aefa-33ed-4e9d-842d-8d9844991fe6" />
+
+
