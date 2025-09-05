@@ -54,7 +54,8 @@ Ajouter la page home.html selon la maquette Figma
 
 # solution7
 Passer le logo "Pay My Buddy" en bouton jaune  
-Création automatique du solde 0.0 lors de l’inscription d’un utilisateur.
+Ajouter le lien 'Home' dans la barre de navigation.
+
 
 
 
