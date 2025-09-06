@@ -78,3 +78,6 @@ Pour éviter de répéter le code <nav> et le CSS dans toutes les pages.
 
 # solution12 
 Rendre les liens 'home' et 'Se déconnecter' actifs.
+
+# solution13
+Implémentation de la page 'Profil'  

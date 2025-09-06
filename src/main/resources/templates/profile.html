@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="fr"
+      layout:decorate="~{layout}">
+<head>
+    <title>Profil</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main layout:fragment="content" class="profile-container">
+    <h2>Mon profil</h2>
+
+    <form th:action="@{/profile/update}" method="post" class="profile-form">
+        <div class="profile-row">
+            <label>Username</label>
+            <input type="text" name="username" th:value="${user.username}" required/>
+        </div>
+
+        <div class="profile-row">
+            <label>Mail</label>
+            <input type="email" name="email" th:value="${user.email}" required/>
+        </div>
+
+        <div class="profile-row">
+            <label>Mot de passe</label>
+            <input type="password" name="password" placeholder="Nouveau mot de passe"/>
+        </div>
+
+        <div class="profile-actions">
+            <button type="submit" class="btn-orange">Modifier</button>
+        </div>
+    </form>
+
+    <p th:if="${success}" th:text="${success}" class="msg-success"></p>
+    <p th:if="${error}" th:text="${error}" class="msg-error"></p>
+</main>
+</body>
+</html>
