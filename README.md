@@ -76,4 +76,5 @@ Implémenter la page "Ajouter relation"
 Mettre en place un Layout global Thymeleaf pour la barre de navigation  
 Pour éviter de répéter le code <nav> et le CSS dans toutes les pages.
 
-
+# solution12 
+Rendre les liens 'home' et 'Se déconnecter' actifs.
