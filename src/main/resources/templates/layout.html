@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title layout:title-pattern="$CONTENT_TITLE - Pay My Buddy">Pay My Buddy</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet"th:href="@{/css/style.css}">
 </head>
 <body>
 <!-- Navbar commune -->
@@ -15,7 +15,7 @@
         <li><a href="/home">Home</a></li>
         <li><a href="#">Transférer</a></li>
         <li><a href="#">Profil</a></li>
-        <li><a href="/relation">Ajouter relation</a></li>
+        <li><a href="/relation" class="active">Ajouter relation</a></li>
         <li><a href="/logout">Se déconnecter</a></li>
     </ul>
 </nav>

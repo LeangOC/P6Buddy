@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login - Pay My Buddy</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 <div class="login-container">
@@ -20,9 +20,10 @@
                 Nouveau Ici : <a th:href="@{/signup}" href="/signup">Inscription</a>
             </p>
         </div>
+        <p th:if="${error}" th:text="${error}" style="color: red;"></p>
     </form>
 </div>
-<p th:if="${error}" th:text="${error}" style="color: red;"></p>
+
 </body>
 </html>
 
