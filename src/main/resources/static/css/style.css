@@ -220,3 +220,129 @@ main {
     font-size: 14px;
 }
 
+/* Container transfert */
+.transfer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Formulaire transfert */
+.transfer-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.transfer-form select,
+.transfer-form input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Bouton payer */
+.btn-pay {
+    padding: 12px 20px;
+    background-color: #4da6ff; /* bleu clair */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-pay:hover {
+    background-color: #1a8cff;
+}
+
+/* Tableau transactions */
+.transaction-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-table th {
+    background: #f2f2f2;
+    font-weight: 600;
+}
+
+/* Formulaire relations */
+.relation-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.relation-form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.btn-add {
+    padding: 10px 20px;
+    background-color: #4da6ff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: #1a8cff;
+}
+
+/* Table des relations */
+.relations-list {
+    margin-top: 30px;
+}
+
+.relations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.relations-table th,
+.relations-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.relations-table th {
+    background: #f2f2f2;
+    font-weight: 600;
+}
+

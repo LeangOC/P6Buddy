@@ -2,6 +2,7 @@ package com.oc.P6Buddy.controller;
 
 import com.oc.P6Buddy.model.Transaction;
 import com.oc.P6Buddy.model.User;
+import com.oc.P6Buddy.service.RelationService;
 import com.oc.P6Buddy.service.TransferService;
 import com.oc.P6Buddy.repository.TransactionRepository;
 import jakarta.servlet.http.HttpSession;
@@ -16,11 +17,14 @@ public class TransferController {
 
     private final TransferService transferService;
     private final TransactionRepository transactionRepository;
+    private final RelationService relationService;
 
     public TransferController(TransferService transferService,
-                              TransactionRepository transactionRepository) {
+                              TransactionRepository transactionRepository,
+                              RelationService relationService) {
         this.transferService = transferService;
         this.transactionRepository = transactionRepository;
+        this.relationService = relationService;
     }
 
     @GetMapping("/transfer")
@@ -28,10 +32,15 @@ public class TransferController {
         User loggedUser = (User) session.getAttribute("loggedUser");
         if (loggedUser == null) return "redirect:/login";
 
+        // Transactions existantes
         List<Transaction> transactions = transactionRepository.findBySender(loggedUser);
         model.addAttribute("transactions", transactions);
 
-        return "transfer"; // templates/transfer.html
+        // Relations de l'utilisateur connecté
+        List<String> relations = relationService.getBuddyEmails(loggedUser);
+        model.addAttribute("relations", relations);
+
+        return "transfer";
     }
 
     @PostMapping("/transfer")
@@ -50,8 +59,13 @@ public class TransferController {
             model.addAttribute("error", e.getMessage());
         }
 
+        // Transactions actualisées
         List<Transaction> transactions = transactionRepository.findBySender(loggedUser);
         model.addAttribute("transactions", transactions);
+
+        // Relations actualisées
+        List<String> relations = relationService.getBuddyEmails(loggedUser);
+        model.addAttribute("relations", relations);
 
         return "transfer";
     }

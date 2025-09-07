@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class RelationController {
@@ -33,6 +34,12 @@ public class RelationController {
         }
         String message = relationService.addRelation(currentUser, email);
         model.addAttribute("message", message);
+
+
+        // ✅ Récupérer la liste mise à jour après ajout
+        List<String> buddyEmails = relationService.getBuddyEmails(currentUser);
+        model.addAttribute("relations", buddyEmails);
+
         return "relation";
     }
 }

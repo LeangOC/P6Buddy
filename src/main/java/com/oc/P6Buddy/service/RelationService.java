@@ -7,6 +7,9 @@ import com.oc.P6Buddy.repository.BuddyRepository;
 import com.oc.P6Buddy.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class RelationService {
     private final UserRepository userRepository;
@@ -34,5 +37,14 @@ public class RelationService {
                     return "Relation ajoutée avec succès ✅";
                 })
                 .orElse("Aucun utilisateur trouvé avec cet email.");
+    }
+    /**
+     * Retourne la liste des adresses email des buddies de l'utilisateur connecté
+     */
+    public List<String> getBuddyEmails(User currentUser) {
+        List<Buddy> buddies = buddyRepository.findByUser(currentUser);
+        return buddies.stream()
+                .map(b -> b.getBuddy().getEmail())
+                .collect(Collectors.toList());
     }
 }
