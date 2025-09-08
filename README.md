@@ -77,4 +77,6 @@ Mettre en place un Layout global Thymeleaf pour la barre de navigation
 Pour éviter de répéter le code <nav> et le CSS dans toutes les pages.
 
 # solution11bis
-Ajouter tableau pour afficher les relations existantes.
+Ajouter tableau pour afficher les relations existantes.  
+<img width="398" height="377" alt="image" src="https://github.com/user-attachments/assets/1fdc84d5-1e74-4460-9eef-4ebce12b07fb" />
+
