@@ -70,7 +70,8 @@ Encadrer en bleu l'affichage du solde
 
 # solution10
 Implémenter la page "Ajouter relation"  
-<img width="384" height="377" alt="image" src="https://github.com/user-attachments/assets/34123a74-8bd0-45d6-96e2-2dd88a60e75a" />
+<img width="574" height="600" alt="image" src="https://github.com/user-attachments/assets/27276196-1bbb-4f77-8442-dc910bc16369" />
+
 
 
 
