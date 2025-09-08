@@ -81,3 +81,7 @@ Rendre les liens 'home' et 'Se déconnecter' actifs.
 
 # solution13
 Implémentation de la page 'Profil'  
+
+# solution13bis
+implémentation à part des classes ProfilController et ProfilService  
+
