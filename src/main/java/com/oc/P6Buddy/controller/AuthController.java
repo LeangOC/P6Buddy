@@ -77,4 +77,22 @@ public class AuthController {
         session.invalidate();
         return "redirect:/login";
     }
+    // Ajout de la route Home
+    @GetMapping("/home")
+    public String home(Model model, HttpSession session) {
+        User loggedUser = (User) session.getAttribute("loggedUser");
+
+        if (loggedUser == null) {
+            return "redirect:/login"; // sécurité si pas connecté
+        }
+
+        // Passage des données au modèle
+        model.addAttribute("user", loggedUser);
+
+        // Recalcul ou récupération du solde
+        Double balance = authService.getUserBalance(loggedUser.getId());
+        model.addAttribute("balance", balance);
+
+        return "home"; // templates/home.html
+    }
 }
