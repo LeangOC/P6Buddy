@@ -291,58 +291,80 @@ main {
     font-weight: 600;
 }
 
-/* Formulaire relations */
-.relation-form {
+/* === Page Relation === */
+.relation-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.relation-container h2 {
+    margin-bottom: 15px;
+}
+
+.relation-container form {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.relation-form input {
+.relation-container input[type="email"] {
     flex: 1;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
-.btn-add {
-    padding: 10px 20px;
-    background-color: #4da6ff;
-    color: white;
+.relation-container button[type="submit"] {
+    background-color: #FFD700; /* Jaune */
+    color: #000;
     font-weight: bold;
     border: none;
-    border-radius: 8px;
+    padding: 12px 20px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-.btn-add:hover {
-    background-color: #1a8cff;
+.relation-container button[type="submit"]:hover {
+    background-color: #e6c200; /* Jaune plus foncé */
 }
 
-/* Table des relations */
-.relations-list {
-    margin-top: 30px;
+.relation-container .message {
+    margin-top: 10px;
+    font-style: italic;
+    color: green;
 }
 
-.relations-table {
+.relation-container h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.relation-container table {
     width: 100%;
     border-collapse: collapse;
     background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.relations-table th,
-.relations-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #eee;
+.relation-container th,
+.relation-container td {
+    padding: 12px;
     text-align: left;
 }
 
-.relations-table th {
-    background: #f2f2f2;
-    font-weight: 600;
+.relation-container th {
+    background: #f1f1f1;
+    font-weight: bold;
 }
 
+.relation-container tr:nth-child(even) {
+    background: #fafafa;
+}

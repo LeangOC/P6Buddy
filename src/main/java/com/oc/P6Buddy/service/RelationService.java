@@ -42,9 +42,8 @@ public class RelationService {
      * Retourne la liste des adresses email des buddies de l'utilisateur connecté
      */
     public List<String> getBuddyEmails(User currentUser) {
-        List<Buddy> buddies = buddyRepository.findByUser(currentUser);
-        return buddies.stream()
+        return buddyRepository.findByUser(currentUser).stream()
                 .map(b -> b.getBuddy().getEmail())
-                .collect(Collectors.toList());
+                .toList();
     }
 }

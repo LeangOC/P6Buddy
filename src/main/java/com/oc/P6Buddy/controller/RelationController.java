@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.servlet.http.HttpSession;
+
 import java.util.List;
 
 @Controller
@@ -20,7 +21,15 @@ public class RelationController {
     }
 
     @GetMapping("/relation")
-    public String relationPage() {
+    public String relationPage(HttpSession session, Model model) {
+        User currentUser = (User) session.getAttribute("loggedUser");
+        if (currentUser == null) {
+            return "redirect:/login"; // sécurité si pas connecté
+        }
+
+        // Charger directement la liste des relations existantes
+        model.addAttribute("relations", relationService.getBuddyEmails(currentUser));
+
         return "relation"; // templates/relation.html
     }
 
@@ -35,10 +44,8 @@ public class RelationController {
         String message = relationService.addRelation(currentUser, email);
         model.addAttribute("message", message);
 
-
-        // ✅ Récupérer la liste mise à jour après ajout
-        List<String> buddyEmails = relationService.getBuddyEmails(currentUser);
-        model.addAttribute("relations", buddyEmails);
+        //Recharger la liste des relations après ajout
+        model.addAttribute("relations", relationService.getBuddyEmails(currentUser));
 
         return "relation";
     }

@@ -5,15 +5,32 @@
       layout:decorate="~{layout}">
 <head>
     <title>Ajouter relation</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<main layout:fragment="content" class="main-content">
+<main layout:fragment="content" class="relation-container">
     <h2>Chercher une relation</h2>
     <form th:action="@{/relation}" method="post">
         <input type="email" name="email" placeholder="Saisir une adresse mail" required>
         <button type="submit">Ajouter</button>
     </form>
+
     <p class="message" th:if="${message}" th:text="${message}"></p>
+
+    <h3>Mes relations</h3>
+    <p th:if="${#lists.isEmpty(relations)}">Aucune relation pour l’instant.</p>
+    <table th:if="${!#lists.isEmpty(relations)}">
+        <thead>
+        <tr>
+            <th>Adresse email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="relation : ${relations}">
+            <td th:text="${relation}"></td>
+        </tr>
+        </tbody>
+    </table>
 </main>
 </body>
 </html>
