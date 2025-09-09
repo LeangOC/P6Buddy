@@ -220,3 +220,80 @@ main {
     font-size: 14px;
 }
 
+/* === Page Relation === */
+.relation-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.relation-container h2 {
+    margin-bottom: 15px;
+}
+
+.relation-container form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.relation-container input[type="email"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.relation-container button[type="submit"] {
+    background-color: #FFD700; /* Jaune */
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.relation-container button[type="submit"]:hover {
+    background-color: #e6c200; /* Jaune plus foncé */
+}
+
+.relation-container .message {
+    margin-top: 10px;
+    font-style: italic;
+    color: green;
+}
+
+.relation-container h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.relation-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.relation-container th,
+.relation-container td {
+    padding: 12px;
+    text-align: left;
+}
+
+.relation-container th {
+    background: #f1f1f1;
+    font-weight: bold;
+}
+
+.relation-container tr:nth-child(even) {
+    background: #fafafa;
+}
