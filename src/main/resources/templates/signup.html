@@ -11,14 +11,31 @@
         <button class="logo-btn">Pay My Buddy</button>
     </div>
 
-    <form th:action="@{/signup}" method="post" class="login-form">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="email" name="email" placeholder="Mail" required>
-        <input type="password" name="password" placeholder="Mot de passe" required>
+    <!-- Formulaire lié au DTO -->
+    <form th:action="@{/signup}" th:object="${signupRequestDTO}" method="post" class="login-form">
+
+        <div>
+            <input type="text" th:field="*{username}" placeholder="Username">
+            <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}" style="color: red;"></p>
+        </div>
+
+        <div>
+            <input type="email" th:field="*{email}" placeholder="Mail">
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red;"></p>
+        </div>
+
+        <div>
+            <input type="password" th:field="*{password}" placeholder="Mot de passe">
+            <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" style="color: red;"></p>
+        </div>
+
         <button type="submit" class="login-btn">S’inscrire</button>
     </form>
+
+    <!-- Messages de succès ou d'erreur -->
     <p th:if="${success}" th:text="${success}" style="color: green; font-weight: bold;"></p>
     <p th:if="${error}" th:text="${error}" style="color: red;"></p>
+
     <div class="row mx-auto my-auto">
         <p class="text-center">
             Déjà inscrit ? <a th:href="@{/login}" href="/login">Se connecter</a>
