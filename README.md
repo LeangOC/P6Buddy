@@ -104,5 +104,6 @@ Rattrapage de la solution solution11bis
 # solution15
 sortir l'endpoint /signup de la classe AuthController : SignupController et SignupService
 
-# solution16
-passer en modèle DTO l'endpoint /signup
+# solution16  
+Passer en modèle DTO l'endpoint /signup  
+
