@@ -52,25 +52,7 @@ public class AuthController {
         return "login";
     }
 
-    @GetMapping("/signup")
-    public String signupPage() {
-        return "signup"; // templates/signup.html
-    }
 
-    @PostMapping("/signup")
-    public String doSignup(@RequestParam String username,
-                           @RequestParam String email,
-                           @RequestParam String password,
-                           Model model) {
-        try {
-            authService.register(username, email, password);
-            model.addAttribute("success", "Inscription réussie ! Vous pouvez maintenant vous connecter.");
-            return "signup";
-        } catch (IllegalArgumentException e) {
-            model.addAttribute("error", e.getMessage());
-            return "signup";
-        }
-    }
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {

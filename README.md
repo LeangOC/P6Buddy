@@ -100,3 +100,6 @@ Implémentation de la page 'Transférer'
 
 # solution14bis
 Rattrapage de la solution solution11bis
+
+# solution15
+sortir l'endpoint /signup de la classe AuthController : SignupController et SignupService

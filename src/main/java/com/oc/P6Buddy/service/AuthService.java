@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class AuthService {
+
     private final UserRepository userRepository;
     private final AccountRepository accountRepository;
 
@@ -20,28 +21,7 @@ public class AuthService {
 
     public Optional<User> authenticate(String email, String rawPassword) {
         return userRepository.findByEmail(email)
-                .filter(u -> u.getPassword().equals(rawPassword));
-    }
-
-    public User register(String username, String email, String rawPassword) {
-        userRepository.findByEmail(email).ifPresent(u -> {
-            throw new IllegalArgumentException("Cet email est déjà utilisé !");
-        });
-
-        User user = new User();
-        user.setUsername(username);
-        user.setEmail(email);
-        user.setPassword(rawPassword);
-
-        User savedUser = userRepository.save(user);
-
-        // Créer automatiquement un compte avec solde = 0
-        Account account = new Account();
-        account.setUser(savedUser);
-        account.setBalance(0.0);
-        accountRepository.save(account);
-
-        return savedUser;
+                .filter(u -> u.getPassword().equals(rawPassword)); // comparaison simple (non sécurisée)
     }
 
     public Double getUserBalance(Integer userId) {
@@ -61,11 +41,9 @@ public class AuthService {
         user.setEmail(email);
 
         if (password != null && !password.isBlank()) {
-            user.setPassword(password); // mot de passe en clair
+            user.setPassword(password); // mot de passe mis à jour sans hash
         }
 
         return userRepository.save(user);
     }
-
-
 }
