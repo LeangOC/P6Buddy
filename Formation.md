@@ -32,3 +32,4 @@ Avec le Spring Data JPA :
 Possibilité d'externaliser le fichier configuration application.properties ou d'utiliser la variable système ( ex:mot de passe )   
 
 
+
