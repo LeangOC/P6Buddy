@@ -107,3 +107,6 @@ sortir l'endpoint /signup de la classe AuthController : SignupController et Sign
 # solution16  
 Passer en modèle DTO l'endpoint /signup  
 
+# solution16bis
+sortir l'endpoint /profile de la classe AuthController : ProfileController et ProfileService
+

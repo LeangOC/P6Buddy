@@ -30,20 +30,5 @@ public class AuthService {
                 .orElse(0.0);
     }
 
-    public User updateUser(Integer userId, String username, String email, String password) {
-        Optional<User> optionalUser = userRepository.findById(userId);
-        if (optionalUser.isEmpty()) {
-            throw new IllegalArgumentException("Utilisateur introuvable");
-        }
 
-        User user = optionalUser.get();
-        user.setUsername(username);
-        user.setEmail(email);
-
-        if (password != null && !password.isBlank()) {
-            user.setPassword(password); // mot de passe mis à jour sans hash
-        }
-
-        return userRepository.save(user);
-    }
 }
