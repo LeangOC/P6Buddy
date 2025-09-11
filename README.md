@@ -110,3 +110,6 @@ Passer en modèle DTO l'endpoint /signup
 # solution16bis
 sortir l'endpoint /profile de la classe AuthController : ProfileController et ProfileService
 
+# solution17
+Implémentation de l'endpoint /crediter  
+
