@@ -113,3 +113,6 @@ sortir l'endpoint /profile de la classe AuthController : ProfileController et Pr
 # solution17
 Implémentation de l'endpoint /crediter  
 
+# Solution
+Implémentation des classes de tests.
+
