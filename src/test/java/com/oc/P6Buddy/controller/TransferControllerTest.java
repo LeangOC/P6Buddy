@@ -35,7 +35,7 @@ class TransferControllerTest {
     }
 
     // ---------- TEST GET /transfer ----------
-
+    //Accès à la page de transfert avec un utilisateur connecté
     @Test
     void testTransferPageWithLoggedUser() {
         // Arrange
@@ -58,6 +58,7 @@ class TransferControllerTest {
         verify(model).addAttribute("relations", buddies);
     }
 
+    //Redirection vers /login si l’utilisateur n’est pas connecté
     @Test
     void testTransferPageWithNoUser() {
         // Arrange
@@ -73,7 +74,7 @@ class TransferControllerTest {
     }
 
     // ---------- TEST POST /transfer ----------
-
+    //Un virement est effectué avec succès
     @Test
     void testDoTransferSuccess() {
         // Arrange
@@ -98,8 +99,9 @@ class TransferControllerTest {
         verify(model).addAttribute("relations", buddies);
     }
 
+    //Une erreur survient pendant le virement
     @Test
-    void testDoTransferWithException() {
+       void testDoTransferWithException() {
         // Arrange
         User loggedUser = new User();
         loggedUser.setId(1);
@@ -124,6 +126,7 @@ class TransferControllerTest {
         verify(model).addAttribute("relations", buddies);
     }
 
+    //Tentative de virement sans utilisateur connecté
     @Test
     void testDoTransferWithNoUser() {
         // Arrange

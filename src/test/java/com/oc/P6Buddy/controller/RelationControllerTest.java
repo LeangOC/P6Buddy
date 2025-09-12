@@ -28,7 +28,7 @@ class RelationControllerTest {
     }
 
     // ---------- TEST GET /relation ----------
-
+    //L’utilisateur est connecté, la liste des relations est affichée
     @Test
     void testRelationPageWithLoggedUser() {
         // Arrange
@@ -49,6 +49,7 @@ class RelationControllerTest {
         verify(model).addAttribute("relations", mockBuddyList);
     }
 
+    //L’utilisateur n’est pas connecté → redirection vers /login
     @Test
     void testRelationPageWithNoUserInSession() {
         // Arrange
@@ -64,7 +65,7 @@ class RelationControllerTest {
     }
 
     // ---------- TEST POST /relation ----------
-
+    //Ajout d’un buddy avec un utilisateur connecté
     @Test
     void testAddRelationWithLoggedUser() {
         // Arrange
@@ -90,6 +91,7 @@ class RelationControllerTest {
         verify(model).addAttribute("relations", updatedBuddyList);
     }
 
+    //Tentative d’ajout de buddy sans utilisateur connecté
     @Test
     void testAddRelationWithNoUserInSession() {
         // Arrange

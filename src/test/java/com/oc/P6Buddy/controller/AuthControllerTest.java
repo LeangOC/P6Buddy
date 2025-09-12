@@ -35,7 +35,7 @@ class AuthControllerTest {
         String viewName = authController.loginPage();
         assertEquals("login", viewName);
     }
-
+     //L'utilisateur est authentifié avec succès.
     @Test
     void testDoLoginSuccess() {
         // Arrange
@@ -59,6 +59,7 @@ class AuthControllerTest {
         verify(model).addAttribute("balance", 100.0);
     }
 
+    //L'utilisateur n'est pas authentifié (mauvais identifiants).
     @Test
     void testDoLoginFailure() {
         // Arrange

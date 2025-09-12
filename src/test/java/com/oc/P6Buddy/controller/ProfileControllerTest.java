@@ -28,7 +28,7 @@ class ProfileControllerTest {
     }
 
     // ---------- TEST GET /profile ----------
-
+    //Accès à /profile avec un utilisateur connecté
     @Test
     void testProfilePageWithLoggedInUser() {
         // Arrange
@@ -46,6 +46,7 @@ class ProfileControllerTest {
         verify(model).addAttribute("user", user);
     }
 
+    //Accès à /profile sans utilisateur connecté
     @Test
     void testProfilePageWithNoUserInSession() {
         // Arrange
@@ -60,7 +61,7 @@ class ProfileControllerTest {
     }
 
     // ---------- TEST POST /profile/update ----------
-
+    //Mise à jour réussie du profil
     @Test
     void testUpdateProfileSuccess() {
         // Arrange
@@ -88,6 +89,7 @@ class ProfileControllerTest {
         verify(model).addAttribute("success", "Profil mis à jour avec succès !");
     }
 
+    //Tentative de mise à jour sans utilisateur connecté
     @Test
     void testUpdateProfileWithNoUserInSession() {
         // Arrange
@@ -104,6 +106,7 @@ class ProfileControllerTest {
         verify(model, never()).addAttribute(anyString(), any());
     }
 
+    //Mise à jour qui échoue avec exception (ex : validation)
     @Test
     void testUpdateProfileThrowsException() {
         // Arrange

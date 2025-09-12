@@ -26,7 +26,7 @@ class CrediterControllerTest {
     }
 
     // ---------- TEST GET /crediter ----------
-
+    //Affichage de la page /crediter avec un utilisateur
     @Test
     void testHomeWithLoggedUser() {
         // Arrange
@@ -46,6 +46,7 @@ class CrediterControllerTest {
         verify(model).addAttribute("balance", 200.0);
     }
 
+    //Redirection vers /login si l'utilisateur n'est pas connecté
     @Test
     void testHomeWithNoUserInSession() {
         // Arrange
@@ -60,7 +61,7 @@ class CrediterControllerTest {
     }
 
     // ---------- TEST POST /crediter ----------
-
+    //Crédit d’un montant valide avec utilisateur connecté
     @Test
     void testCrediterWithLoggedUserAndValidAmount() {
         // Arrange
@@ -81,6 +82,7 @@ class CrediterControllerTest {
         verify(model).addAttribute("balance", 300.0);
     }
 
+    //Redirection vers /login si POST sans utilisateur
     @Test
     void testCrediterWithNoUserInSession() {
         // Arrange
@@ -95,6 +97,7 @@ class CrediterControllerTest {
         verifyNoInteractions(model);
     }
 
+    //Gestion d'une erreur levée par le service (ex : montant négatif)
     @Test
     void testCrediterThrowsException() {
         // Arrange

@@ -26,7 +26,7 @@ class SignupControllerTest {
     }
 
     // ---------- TEST GET /signup ----------
-
+    //Le formulaire d'inscription est bien affiché avec un DTO vide
     @Test
     void testSignupPageReturnsSignupView() {
         // Act
@@ -38,7 +38,7 @@ class SignupControllerTest {
     }
 
     // ---------- TEST POST /signup ----------
-
+    //L'utilisateur s'inscrit avec des données valides
     @Test
     void testDoSignupSuccess() {
         // Arrange
@@ -58,6 +58,7 @@ class SignupControllerTest {
         verify(model).addAttribute("success", "Inscription réussie ! Vous pouvez maintenant vous connecter.");
     }
 
+    //Le formulaire est invalide (ex. : champ vide ou email mal formé)
     @Test
     void testDoSignupValidationErrors() {
         // Arrange
@@ -73,6 +74,7 @@ class SignupControllerTest {
         verify(model, never()).addAttribute(eq("success"), any());
     }
 
+    //Le service d'inscription déclenche une exception (ex. : email déjà utilisé)
     @Test
     void testDoSignupThrowsException() {
         // Arrange
