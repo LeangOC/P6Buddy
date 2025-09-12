@@ -114,5 +114,6 @@ sortir l'endpoint /profile de la classe AuthController : ProfileController et Pr
 Implémentation de l'endpoint /crediter  
 
 # Solution
-Implémentation des classes de tests.
+Implémentation des classes de tests : Rapport Jacoco couverture code = 93%
+
 
