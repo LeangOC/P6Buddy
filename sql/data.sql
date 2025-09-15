@@ -2,9 +2,9 @@
 USE MyP6Buddy
 -- Users
 INSERT INTO Users (username, email, password) VALUES
-('Alice', 'alice@example.com', 'password123'),
-('Bob', 'bob@example.com', 'password123'),
-('Charlie', 'charlie@example.com', 'password123');
+('Mei', 'mei@oc.com', '123'),
+('Bob', 'bob@oc.com', '123'),
+('Ken', 'ken@oc.com', '123');
 
 -- Accounts (solde initial)
 INSERT INTO Account (user_id, balance) VALUES
@@ -20,6 +20,6 @@ INSERT INTO Buddy (user_id, buddy_id) VALUES
 
 -- Transactions
 INSERT INTO Transaction (sender, receiver, description, amount) VALUES
-(1, 2, 'Déjeuner partagé', 15.00),   -- Alice envoie 15€ à Bob
+(1, 2, 'Repas CROUS', 3.00),   -- Alice envoie 3€ à Bob
 (2, 3, 'Covoiturage', 10.00),        -- Bob envoie 10€ à Charlie
 (3, 1, 'Cadeau', 20.00);             -- Charlie envoie 20€ à Alice
