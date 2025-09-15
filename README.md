@@ -74,20 +74,15 @@ Implémenter la page "Ajouter relation"
 
 # solution11
 Mettre en place un Layout global Thymeleaf pour la barre de navigation  
-Pour éviter de répéter le code <nav> et le CSS dans toutes les pages.
+Pour éviter de répéter le code 'nav' et le CSS dans toutes les pages.  
 
-# solution11bis
-Ajouter tableau pour afficher les relations existantes.  
-<img width="398" height="377" alt="image" src="https://github.com/user-attachments/assets/1fdc84d5-1e74-4460-9eef-4ebce12b07fb" />
-
-# solution12
+# solution12 
 Rendre les liens 'home' et 'Se déconnecter' actifs.
 
-# solution12bis
-rattrapage de la solution11bis
-
 # solution13
-Implémentation de la page 'Profil'  
+Implémentation de la page 'Profil'   
+<img width="348" height="203" alt="image" src="https://github.com/user-attachments/assets/36aeca43-c805-48a9-8bd6-d05282bad8f5" />
+
 
 # solution13bis
 implémentation à part des classes ProfilController et ProfilService  
