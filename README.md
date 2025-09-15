@@ -72,8 +72,8 @@ Encadrer en bleu l'affichage du solde
 Implémenter la page "Ajouter relation"  
 <img width="384" height="377" alt="image" src="https://github.com/user-attachments/assets/34123a74-8bd0-45d6-96e2-2dd88a60e75a" />
 
-# solution11
+# solution11  
 Mettre en place un Layout global Thymeleaf pour la barre de navigation  
-Pour éviter de répéter le code <nav> et le CSS dans toutes les pages.
+Pour éviter de répéter le code 'nav' et le CSS dans toutes les pages  
 
 
