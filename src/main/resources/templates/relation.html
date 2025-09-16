@@ -14,8 +14,7 @@
         <input type="email" name="email" placeholder="Saisir une adresse mail" required>
         <button type="submit">Ajouter</button>
     </form>
-
-    <p class="message" th:if="${message}" th:text="${message}"></p>
+    <p th:if="${message}" th:classappend="${error} ? 'error-message' : 'success-message'" th:text="${message}"></p>
 
     <h3>Mes relations</h3>
     <p th:if="${#lists.isEmpty(relations)}">Aucune relation pour l’instant.</p>

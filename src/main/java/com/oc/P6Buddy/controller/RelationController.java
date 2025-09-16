@@ -41,10 +41,18 @@ public class RelationController {
         if (currentUser == null) {
             return "redirect:/login"; // sécurité
         }
-        String message = relationService.addRelation(currentUser, email);
-        model.addAttribute("message", message);
 
-        //Recharger la liste des relations après ajout
+        String message = relationService.addRelation(currentUser, email);
+
+        // Déterminer si le message est une erreur
+        boolean isError = message.contains("déjà") ||
+                message.contains("vous ajouter vous-même") ||
+                message.contains("Aucun utilisateur");
+
+        model.addAttribute("message", message);
+        model.addAttribute("error", isError);
+
+        // Recharger la liste des relations après ajout
         model.addAttribute("relations", relationService.getBuddyEmails(currentUser));
 
         return "relation";

@@ -113,6 +113,9 @@ sortir l'endpoint /profile de la classe AuthController : ProfileController et Pr
 # solution17
 Implémentation de l'endpoint /crediter  
 
+# solution18
+Implémentation d'affichage des messages d'erreur en couleur rouge page relation.
+
 # Solution
 Implémentation des classes de tests : Rapport Jacoco couverture code = 93%
 
