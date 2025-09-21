@@ -47,7 +47,7 @@ public class AuthController {
             return "home"; // page d’accueil après connexion
         }
 
-        model.addAttribute("error", "Email ou mot de passe incorrect.");
+        model.addAttribute("error", "⚠\uFE0F Email ou mot de passe incorrect. Veuillez réessayer");
         model.addAttribute("enteredEmail", email);
         return "login";
     }

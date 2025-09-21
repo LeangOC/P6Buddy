@@ -5,14 +5,14 @@ import jakarta.validation.constraints.NotBlank;
 
 public class SignupRequestDTO {
 
-    @NotBlank(message = "Le nom d'utilisateur est obligatoire.")
+    @NotBlank(message = " ⚠\uFE0F Le nom d\u0027' utilisateur est obligatoire.")
     private String username;
 
     @Email(message = "Email invalide.")
-    @NotBlank(message = "L'email est obligatoire.")
+    @NotBlank(message = " ⚠\uFE0F L\u0027' email est obligatoire.")
     private String email;
 
-    @NotBlank(message = "Le mot de passe est obligatoire.")
+    @NotBlank(message = "⚠\uFE0F Le mot de passe est obligatoire.")
     private String password;
 
     // Getters et Setters
