@@ -55,7 +55,7 @@ Le contenu et le fonctionnement du site doivent être faciles à comprendre.
 Exemples :
 Utiliser un langage clair et simple.
 Les liens et boutons doivent être intuitifs (ex. "Envoyer" plutôt que "Cliquez ici").
-Fournir des messages d’erreur clairs dans les formulaires.
+Fournir des messagges d’erreur clairs dans les formulaires.
 
 4. Robuste
 Le contenu doit être compatible avec différents outils d’assistance (lecteurs d’écran, navigateurs, etc.).

@@ -74,7 +74,7 @@ class AuthControllerTest {
         // Assert
         assertEquals("login", viewName); // Hypothèse : on reste sur login en cas d’échec (à adapter si autre comportement)
         // On vérifie que les bons messages d'erreur sont bien ajoutés au modèle
-        verify(model).addAttribute("error", "Email ou mot de passe incorrect.");
+        verify(model).addAttribute("error", "⚠\uFE0F Email ou mot de passe incorrect. Veuillez réessayer");
         verify(model).addAttribute("enteredEmail", email);
 
         // On vérifie qu'aucune session n'est ouverte
