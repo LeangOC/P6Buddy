@@ -1,5 +1,5 @@
 -- ==== INSERT DATA ====
-USE MyP6Buddy
+USE P6Buddy
 -- Users
 INSERT INTO Users (username, email, password) VALUES
 ('Mei', 'mei@oc.com', '123'),
