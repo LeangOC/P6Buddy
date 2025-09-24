@@ -121,8 +121,16 @@ Implémentation des classes de tests : Rapport Jacoco couverture code = 93%
 
 
 # Fin  
-Merger la branche "Solution" ( vers celle de "main")  
-Exporter la valeur de la propriété spring.datasource.password  dans l' environnement Système
+- Merger la branche "Solution" ( vers celle de "main")  
+- Exporter la valeur de la propriété spring.datasource.password  dans l' environnement Système  
+- Ajout des interfaces Web qui font appel à la couche DAL avec la gestion des transactions (commits et rollback)    
+Transférer :    
+<img width="462" height="336" alt="image" src="https://github.com/user-attachments/assets/1fe32ac7-d91c-4b96-ab2e-eeb64a22a09e" />
+   
+Créditer :  
+
+<img width="465" height="317" alt="image" src="https://github.com/user-attachments/assets/fd556c99-f9d1-49c3-ba4c-b81b49c01902" />  
+
 
 
 
