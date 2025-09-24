@@ -121,7 +121,7 @@ Implémentation des classes de tests : Rapport Jacoco couverture code = 93%
 
 
 # Fin  
-Merger la branche "Solution" ( vers celle de "main")
+Merger la branche "Solution" ( vers celle de "main")  
 Exporter la valeur de la propriété spring.datasource.password  dans l' environnement Système
 
 
