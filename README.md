@@ -120,3 +120,8 @@ Implémentation d'affichage des messages d'erreur en couleur rouge page relation
 Implémentation des classes de tests : Rapport Jacoco couverture code = 93%
 
 
+# Fin  
+Merger la branche "Solution" ( vers celle de "main")
+
+
+
